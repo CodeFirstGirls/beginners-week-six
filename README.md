@@ -7,3 +7,7 @@
 
 ## Extention task
 - Using variables, change the text in the span to be the name of an artist when the background changes
+
+
+#### Feeling stuck?
+Check out the solution branch!
