@@ -1,21 +1,204 @@
-<!DOCTYPE html>
+<!DOCTYPE html>ß
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title> building a website project for FirstCodeGirls course
+  </title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="style2.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
-  <title>PLaying with Javascript</title>
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 </head>
 <body>
-  <div class="container">
 
-    <h1>Click </h1>
+<header>
 
-    <p>Photo by <span class="photographer">Mike Yukhtenko</span></p>
+</header>
+
+
+    <div id="home" class="row page">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Personalised Perfume</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#scents">Scents</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#aboutus">About us</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      <div class="container">
+        <div class="col-sm-12">
+        <h1>Do you want a scent made just for you?
+        </h1>
+        <p> At Personalised perfumes, we match your personality with a scent tailored just for you!</p>
+        <img class="bottle" src="images/flowersmell.png">
+        </div>
+        <div class="col-sm-12">
+        <a class="btn btn-info btn-lg pull-right" href="#scents" role="button">Yes, show me how </a>
+        </div>
+      </div>
+
   </div>
-  <script src="js/background.js"></script>
-</body>
+
+
+  <div id="products" class="row page">
+    <div class="container">
+      <h1>Products</h1>
+    </div>
+  </div>
+
+  <div id="scents" class="row page">
+    <div class="container">
+      <h1>Scents</h1>
+      <style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<h2>Accordion</h2>
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+    </div>
+
+  </div>
+
+  <div id="blog" class="row page">
+    <div class="container">
+      <h1>Blog</h1>
+
+      <dl class="accordion">
+
+      <dt><a href="">Panel 1</a></dt>
+      <dd>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</dd>
+
+      <dt><a href="">Panel 2</a></dt>
+      <dd>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</dd>
+
+      <dt><a href="">Panel 3</a></dt>
+      <dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</dd>
+
+      </dl>
+
+    </div>
+  </div>
+
+  <div id="aboutus" class="row page">
+    <div class="container">
+
+      <style>
+      .vertical-menu {
+        width: 700px;
+        height: 200px;
+        overflow-y: auto;
+      }
+
+      .vertical-menu a {
+        background-color: #eee;
+        color: black;
+        display: block;
+        padding: 12px;
+        text-decoration: none;
+      }
+
+      .vertical-menu a:hover {
+        background-color: #ccc;
+      }
+
+      .vertical-menu a.active {
+        background-color: #4CAF50;
+        color: white;
+      }
+      </style>
+
+
+
+      <h2>Frequently asked questions</h2>
+
+      <div class="vertical-menu">
+        <a href="#v2" class="active">Qustions</a>
+        <a href="#v2">Where is the best place to spay?</a>
+        <a href="#v2">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+        <a href="#">Link 5</a>
+        <a href="#">Link 6</a>
+        <a href="#">Link 7</a>
+        <a href="#">Link 8</a>
+        <a href="#">Link 9</a>
+        <a href="#">Link 10</a>
+      </div>
+      <h1>About us</h1>
+    </div>
+  </div>
+
 </html>
