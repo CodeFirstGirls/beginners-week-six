@@ -18,7 +18,7 @@
 
 </header>
 <!-- this is the navigation bar, got the code from ..... and then edited -->
-
+<body>
     <div id="home" class="row page">
       <nav class="navbar navbar-default">
         <div class="container">
@@ -45,8 +45,8 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
-      <!--placed the h1 into a div and the p nto a div. each is responsive, also did the alignments using
-    pull-right , but the image is not responsive -->
+      <!--placed the h1 into a div and the p into a div. each is responsive, added the button and
+      aligned pull-right , but the image is not responsive, so deleted this image,  -->
       <div class="container">
         <div class="col-sm-12">
         <h1>Do you want a scent made just for you?
@@ -55,15 +55,11 @@
         <div class="col-sm-12">
         <p> At Personalised perfumes, we match your personality with a scent tailored just for you!</p>
         </div>
-        <!--<div class="col-sm-12">
-        <img class="bottle" src="images/flowersmell.png">
-      </div> -->
         <div class="col-sm-12">
         <a class="btn btn-info btn-lg pull-right" href="#scents" role="button">Yes, show me how </a>
         </div>
       </div>
-<!-- this ends the first page -->
-  </div>
+    </div> <!-- this ends the first page -->
 
 <!--The second page starts here -->
   <div id="products" class="row page">
@@ -79,7 +75,7 @@ use this one and edit looks the cleanest for the FAQ section -->
   <div id="scents" class="row page">
     <div class="container">
       <h1>Scents</h1>
-      <style>
+<style>
 .accordion {
   background-color: #eee;
   color: #444;
@@ -104,8 +100,8 @@ use this one and edit looks the cleanest for the FAQ section -->
   overflow: hidden;
 }
 </style>
-</head>
-<body>
+
+
 
 <h2>Accordion</h2>
 
@@ -174,6 +170,67 @@ can look at the link as it takes us to home? -->
     <div class="container">
 
       <style>
+      .accordion {
+        background-color: inherit;
+        color: #939;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 17px;
+        transition: 0.4s;
+      }
+
+      .active, .accordion:hover {
+        background-color: inherit;
+      }
+
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: inherit;
+        font-size: 17px;
+        overflow: hidden;
+      }
+      </style>
+
+      <h2>Frequently asked questions</h2>
+
+      <button class="accordion">Where is the best place to spray?</button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+
+      <button class="accordion">Can perfume damage your skin?</button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+
+      <button class="accordion"> How do you get a lasting scent throughout the day? </button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+
+      <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+      </script>
+<!--
+      <style>
       .vertical-menu {
         width: 700px;
         height: 200px;
@@ -215,8 +272,12 @@ can look at the link as it takes us to home? -->
         <a href="#">Link 9</a>
         <a href="#">Link 10</a>
       </div>
-      <h1>About us</h1>
-    </div>
-  </div>
+    -->
 
+
+
+</div>
+</div>
+
+</body>
 </html>

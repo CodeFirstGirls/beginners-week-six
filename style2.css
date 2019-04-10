@@ -22,3 +22,13 @@
 }
 .navbar-default .navbar-nav > li> a {background: transparent; color: black;font-size: 18px;}
 .navbar-default .navbar-nav > li > a:hover {background: #f9f; color: white;}
+
+ #aboutus {
+  background: #efa;
+  background: url("images/whiteflower.jpg");
+  background-color:rgba(0,0,0,100);
+  background-size: cover;  background-position: 50% 50%;
+}
+#aboutus h2{color: #f9f; font-size: 3em; text-align: right;}
+/*#aboutus h2{color: #f9f}
+.jar{width: 100px;top:65px;left: 30px}*/
